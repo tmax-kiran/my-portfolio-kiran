@@ -48,14 +48,14 @@ export default function Contact() {
                         <p><strong>Location:</strong> Chennai, India</p>
                     </div>
                     <div className="flex justify-center gap-5 mt-6 text-2xl text-gray-600 dark:text-gray-300">
-                        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-                        <FaGithub className="hover:text-black dark:hover:text-white transition-all duration-200 transform hover:scale-110" />
+                        <a href="https://github.com/tmax-kiran" target="_blank" rel="noopener noreferrer">
+                            <FaGithub className="hover:text-black dark:hover:text-white transition-all duration-200 transform hover:scale-110" />
 
                         </a>
-                        <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.instagram.com/designedbykiran2025?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
                             <FaInstagram className="hover:text-pink-500 transition-all duration-200 transform hover:scale-110" />
                         </a>
-                        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/kirankumar-creative/" target="_blank" rel="noopener noreferrer">
                             <FaLinkedin className="hover:text-blue-600 transition-all duration-200 transform hover:scale-110" />
                         </a>
                     </div>
@@ -71,6 +71,7 @@ export default function Contact() {
                         className="w-full p-3 bg-gray-100 dark:bg-[#1e1e1e] text-gray-800 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" />
                     <textarea name="message" rows="5" placeholder="Your Message" required
                         className="w-full p-3 bg-gray-100 dark:bg-[#1e1e1e] text-gray-800 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+                    <input type="hidden" name="to_email" value="client@gmail.com" />
                     <button type="submit" className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all">
                         Send Message
                     </button>

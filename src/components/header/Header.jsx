@@ -22,14 +22,13 @@ const pages = [
   { text: "About", href: "/about" },
   { text: "Projects", href: "/projects" },
   { text: "Contact", href: "/contact" },
-  //   { text: "Fork Project", href: "https://github.com/Abhinav2011/my-portfolio" },
 ];
+
 const pageIcons = [
   HomeRoundedIcon,
   FaceRoundedIcon,
   FolderSharedRoundedIcon,
   CallRoundedIcon,
-  BsGithub,
 ];
 
 const Header = () => {
@@ -38,6 +37,7 @@ const Header = () => {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
+
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
@@ -46,12 +46,13 @@ const Header = () => {
     <AppBar position="sticky" sx={{ backgroundColor: "#19294D" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+          {/* Desktop Logo */}
           <BoltIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="/"
+            component={Link}
+            to="/"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -65,50 +66,44 @@ const Header = () => {
             KiranKumar
           </Typography>
 
+          {/* Mobile Menu Icon */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
+              aria-label="menu"
               onClick={handleOpenNavMenu}
               color="inherit"
             >
               <MenuIcon />
             </IconButton>
             <Menu
-              id="menu-appbar"
               anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
+              anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+              transformOrigin={{ vertical: "top", horizontal: "left" }}
+              sx={{ display: { xs: "block", md: "none" } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="left">
-                    <Link to={page.href}>{page.text}</Link>
-                  </Typography>
+                <MenuItem
+                  key={page.text}
+                  component={Link}
+                  to={page.href}
+                  onClick={handleCloseNavMenu}
+                >
+                  <Typography textAlign="left">{page.text}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
+
+          {/* Mobile Logo */}
           <BoltIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
-            component="a"
-            href=""
+            component={Link}
+            to="/"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -122,6 +117,8 @@ const Header = () => {
           >
             KiranKumar
           </Typography>
+
+          {/* Desktop Menu */}
           <Box
             justifyContent="flex-end"
             sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
@@ -129,33 +126,25 @@ const Header = () => {
             {pages.map((page, index) => {
               const Icon = pageIcons[index];
               return (
-                <div
-                  style={{
+                <Button
+                  key={page.text}
+                  component={Link}
+                  to={page.href}
+                  onClick={handleCloseNavMenu}
+                   className="header-buttons"
+                  sx={{
+                    my: 2,
+                    color: "white",
                     display: "flex",
+                    fontFamily: "poppins",
+                    fontSize: 14,
                     alignItems: "center",
-                    position: "relative",
+                    marginRight: "1.5rem",
                   }}
                 >
-                  <Button
-                    className="header-buttons"
-                    key={page.text}
-                    onClick={handleCloseNavMenu}
-                    sx={{
-                      my: 2,
-                      color: "white",
-                      display: "flex",
-                      fontFamily: "poppins",
-                      fontSize: 14,
-                      alignItems: "center",
-                      marginRight: "1.5rem",
-                    }}
-                  >
-                    <Icon style={{ marginRight: "0.8rem" }} />
-                    <Link to={page.href}>
-                      <Typography color="white">{page.text}</Typography>
-                    </Link>
-                  </Button>
-                </div>
+                  <Icon style={{ marginRight: "0.8rem" }} />
+                  {page.text}
+                </Button>
               );
             })}
           </Box>

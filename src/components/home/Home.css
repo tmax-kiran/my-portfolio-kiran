@@ -7,7 +7,7 @@
     overflow: hidden;
   }
   
-  .background-gradient {
+  /* .background-gradient {
     position: fixed;
     top: 0;
     left: 0;
@@ -29,7 +29,7 @@
     100% {
       background-position: 0% 50%;
     }
-  }
+  } */
   
   .glass-effect {
     background: rgba(255, 255, 255, 0.7);
