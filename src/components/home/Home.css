@@ -152,7 +152,17 @@
     flex-wrap: wrap;
     gap: 0.5rem;
   }
-  
+  .project-status-tag {
+  background-color: #facc15; /* yellow */
+  color: #1f2937;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
   .tech-tag {
     padding: 0.3rem 0.8rem;
     background-color: rgba(240, 240, 240, 0.7);

@@ -4,7 +4,7 @@ import { Typewriter } from "react-simple-typewriter";
 const TypeAnimation = () => {
     return (
         <Typewriter
-            words={[ "Web Developer", "UI/UX Designer","Graphic Designer","Freelancer"]}
+            words={[ "Frontend Web Developer", "UI/UX Designer","Graphic Designer","Freelancer"]}
             loop={true}
             cursor
             cursorStyle="_"
