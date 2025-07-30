@@ -2,7 +2,7 @@ import React from "react";
 import { FiDownloadCloud, FiGithub, FiExternalLink, FiCode } from "react-icons/fi";
 import { Button } from "@mui/material";
 import "./Home.css";
-const resumeURL = "https://drive.google.com/file/d/1ahsxf-lCTFqqF5amadW83EXtsNSWt8G5/view?usp=sharing";
+const resumeURL = "https://drive.google.com/file/d/1dEhsV5yvLCANl-jFX2-_zzaKC6AzFpto/view?usp=sharing";
 
 const HomeBottomPage = () => {
   // Sample project data - replace with your actual projects
@@ -129,9 +129,9 @@ const HomeBottomPage = () => {
               Download Resume
             </Button>
           </a>
-          <Button variant="outlined" color="primary" endIcon={<FiCode />} className="cta-button">
+          {/* <Button variant="outlined" color="primary" endIcon={<FiCode />} className="cta-button">
             View All Projects
-          </Button>
+          </Button> */}
         </div>
       </div>
 
