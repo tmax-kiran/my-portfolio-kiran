@@ -2,7 +2,7 @@ import React from "react";
 import { FiDownloadCloud, FiGithub, FiExternalLink, FiCode } from "react-icons/fi";
 import { Button } from "@mui/material";
 import "./Home.css";
-const resumeURL = "https://drive.google.com/file/d/1dEhsV5yvLCANl-jFX2-_zzaKC6AzFpto/view?usp=sharing";
+const resumeURL = "https://drive.google.com/file/d/1Ly3Jsi7BcHgr08pQ-eSqzo2qXsOcYRWo/view?usp=sharing";
 
 const HomeBottomPage = () => {
   // Sample project data - replace with your actual projects
@@ -41,14 +41,14 @@ const HomeBottomPage = () => {
       company: "Manufacuting industry",
       description: "Led day-to-day operations in the warehouse and stores, ensuring accurate inventory tracking and timely material flow. Developed strong leadership and organizational skills before transitioning to IT."
     },
+    // {
+    //   year: "2021",
+    //   position: "Intern Software Engineer",
+    //   company: "TechnomaX Systems",
+    //   description: "Part of a team developing React-based web apps, focusing on UI implementation and performance optimization."
+    // },
     {
-      year: "2021",
-      position: "Intern Software Engineer",
-      company: "TechnomaX Systems",
-      description: "Part of a team developing React-based web apps, focusing on UI implementation and performance optimization."
-    },
-    {
-      year: "2022-2025",
+      year: "Nov-2021-June-2025",
       position: "Junior Software Engineer",
       company: "TechnomaX Systems",
       description: "Led a small team and independently developed full-fledged web applications using React. Took initiative in learning and applying UI/UX and graphic design to enhance overall product quality."

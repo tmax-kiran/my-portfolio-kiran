@@ -61,64 +61,71 @@ const Projects = () => {
     ];
 
     return (
-        <div className="home-bottom-container">
-            <div className="background-gradient"></div>
+        <>
 
             <h1 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" className="section-title">
                 Featured <span className="highlight">Projects</span>
             </h1>
+            <div className="home-bottom-container">
+                <div className="background-gradient"></div>
 
-            <div className="projects-grid">
-                {featuredProjects.map((project, index) => (
-                    <div
-                        className={`project-card glass-effect ${project.isInProgress ? "dimmed" : ""}`}
-                        key={index}
-                        data-aos="flip-left"
-                        data-aos-delay={index * 100}
-                        data-aos-duration="1000"
-                    >
+                <h1 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" className="section-title">
+                    Featured <span className="highlight">Projects</span>
+                </h1>
+
+                <div className="projects-grid">
+                    {featuredProjects.map((project, index) => (
                         <div
-                            className="project-image"
-                            style={{ backgroundImage: `url(${project.image})` }}
+                            className={`project-card glass-effect ${project.isInProgress ? "dimmed" : ""}`}
+                            key={index}
+                            data-aos="flip-left"
+                            data-aos-delay={index * 100}
+                            data-aos-duration="1000"
                         >
-                            <div className="project-overlay">
-                                <div className="project-links">
-                                    {project.github && (
-                                        <a href={project.github} target="_blank" rel="noreferrer" className="project-link">
-                                            <FiGithub size={20} />
-                                        </a>
-                                    )}
-                                    {project.liveDemo && (
-                                        <a href={project.liveDemo} target="_blank" rel="noreferrer" className="project-link">
-                                            <FiExternalLink size={20} />
-                                        </a>
-                                    )}
+                            <div
+                                className="project-image"
+                                style={{ backgroundImage: `url(${project.image})` }}
+                            >
+                                <div className="project-overlay">
+                                    <div className="project-links">
+                                        {project.github && (
+                                            <a href={project.github} target="_blank" rel="noreferrer" className="project-link">
+                                                <FiGithub size={20} />
+                                            </a>
+                                        )}
+                                        {project.liveDemo && (
+                                            <a href={project.liveDemo} target="_blank" rel="noreferrer" className="project-link">
+                                                <FiExternalLink size={20} />
+                                            </a>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="project-content">
+                                <h3 className="project-title">{project.title}</h3>
+
+                                {/* Show status note if exists */}
+                                {project.statusNote && (
+                                    <p className="project-status-tag">
+                                        {project.statusNote.split("\n").map((line, idx) => (
+                                            <span key={idx} style={{ display: "block" }}>{line}</span>
+                                        ))}
+                                    </p>
+                                )}
+
+                                <p className="project-description">{project.description}</p>
+                                <div className="project-tech">
+                                    {project.technologies.map((tech, techIndex) => (
+                                        <span className="tech-tag" key={techIndex}>{tech}</span>
+                                    ))}
                                 </div>
                             </div>
                         </div>
-                        <div className="project-content">
-                            <h3 className="project-title">{project.title}</h3>
-
-                            {/* Show status note if exists */}
-                            {project.statusNote && (
-                                <p className="project-status-tag">
-                                    {project.statusNote.split("\n").map((line, idx) => (
-                                        <span key={idx} style={{ display: "block" }}>{line}</span>
-                                    ))}
-                                </p>
-                            )}
-
-                            <p className="project-description">{project.description}</p>
-                            <div className="project-tech">
-                                {project.technologies.map((tech, techIndex) => (
-                                    <span className="tech-tag" key={techIndex}>{tech}</span>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
-        </div>
+
+        </>
     );
 };
 
