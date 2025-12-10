@@ -7,7 +7,6 @@ import GitHubCalendar from "react-github-calendar";
 const AboutInfo = () => {
   return (
     <div className="about  text-white px-4 md:px-12 py-10">
-      
       {/* About Me Header */}
       <div
         data-aos="fade-down"
@@ -21,13 +20,27 @@ const AboutInfo = () => {
       {/* About Section */}
       <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
         <div className="text-justify font-mono text-sm md:text-base">
-          <p>
+          {/* <p>
             Hi people, I am{" "}
             <span className="text-green-400 font-bold">KiranKumar</span> from Chennai, India.
             I did my B.E in Mechanical Engineering from{" "}
             <span className="text-green-400 font-bold">Akshaya College of Engineering</span>,
             and currently I'm working at{" "}
             <span className="text-green-400 font-bold">Technomax Systems</span>.
+          </p> */}
+          <p>
+            👋 Hey,
+            <span className="text-green-400 font-bold">
+              {" "}
+              I'm Kirankumar
+            </span>{" "}
+            from Chennai. I’m a Frontend Developer & UI/UX Designer with 3.8
+            years of experience building clean, scalable, and user-first digital
+            products. I turn Figma designs into responsive React interfaces,
+            build reusable components, and deliver consistent UI experiences for
+            enterprise teams—especially UAE-based clients.I love blending
+            development and design to create modern, intuitive, and meaningful
+            digital experiences.
           </p>
 
           <br />
@@ -35,9 +48,18 @@ const AboutInfo = () => {
           <p>
             Apart from development, some things I like are:
             <ul className="mt-2 space-y-1">
-              <li><BsFillArrowRightSquareFill className="inline mr-2" />Playing Badminton</li>
-              <li><BsFillArrowRightSquareFill className="inline mr-2" />Gardening</li>
-              <li><BsFillArrowRightSquareFill className="inline mr-2" />Travelling</li>
+              <li>
+                <BsFillArrowRightSquareFill className="inline mr-2" />
+                Playing Badminton
+              </li>
+              <li>
+                <BsFillArrowRightSquareFill className="inline mr-2" />
+                Gardening
+              </li>
+              <li>
+                <BsFillArrowRightSquareFill className="inline mr-2" />
+                Travelling
+              </li>
             </ul>
           </p>
         </div>

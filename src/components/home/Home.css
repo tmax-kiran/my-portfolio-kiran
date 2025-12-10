@@ -47,29 +47,30 @@
     color: #ffffff;
     margin-top: 3.5rem;
   }
-  
+/*   
   .section-title:after {
     content: '';
     position: absolute;
     bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
+    width: 100%;
     height: 4px;
     background: #32CD30;
     border-radius: 2px;
-  }
+  } */
   
-  .highlight {
+   .highlight {
     color: #32CD30;
     font-weight: 600;
   }
   
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
     margin-bottom: 5rem;
+    padding: 25px;
   }
   
   .project-card {

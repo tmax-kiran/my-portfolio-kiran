@@ -2,7 +2,8 @@ import React from "react";
 import { FiDownloadCloud, FiGithub, FiExternalLink, FiCode } from "react-icons/fi";
 import { Button } from "@mui/material";
 import "./Home.css";
-const resumeURL = "https://drive.google.com/file/d/1Ly3Jsi7BcHgr08pQ-eSqzo2qXsOcYRWo/view?usp=sharing";
+const resumeURL =
+  "https://drive.google.com/file/d/1xmpogl2lZpEqD88WdX-nTm3egUHwj2xZ/view?usp=sharing";
 
 const HomeBottomPage = () => {
   // Sample project data - replace with your actual projects
