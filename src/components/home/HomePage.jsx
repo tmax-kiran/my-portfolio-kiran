@@ -4,7 +4,7 @@ import developer from "../../assets/developer.svg";
 import TypeAnimation from "./TypeAnimation";
 import BlurTextAnimation from "./BlurTextAnimation";
 import { FaLinkedinIn, FaGithub, FaTwitter, FaInstagram } from 'react-icons/fa';
-import Profile from "../../assets/profile.png";
+import Profile from "../../assets/Profile.png";
 
 const HomePage = () => {
   // const handleAnimationComplete = () => {
