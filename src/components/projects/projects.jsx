@@ -168,7 +168,6 @@ const Projects = () => {
   return (
     <>
       <div className="home-bottom-container">
-       
         <Accordion title="UI/UX & Graphic Design Projects">
           <div className="tabs-container mt-10">
             <div className="flex gap-4 justify-center mb-8">
