@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 
 export default function VideoThumbnail({ src, fallback }) {
   const [thumb, setThumb] = useState("");
-
+ 
+  
   useEffect(() => {
     const video = document.createElement("video");
     video.src = src;
