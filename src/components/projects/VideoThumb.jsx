@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function VideoThumbnail({ src, fallback }) {
+export default function VideoThumb({ src, fallback }) {
   const [thumb, setThumb] = useState("");
  
   

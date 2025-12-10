@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import VideoThumbnail from "./VideoThumbnail";
+import VideoThumb from "./VideoThumb";
 // Image imports
 import WishCraft from "../../assets/WishCraft.png";
 import CozyBites from "../../assets/CozyBites.png";
@@ -228,7 +228,7 @@ const Projects = () => {
                       {/* VIDEO OR IMAGE */}
                       {item.type === "video" ? (
                         <div className="relative h-[250px] w-full">
-                          <VideoThumbnail
+                          <VideoThumb
                             src={item.src}
                             loading="lazy"
                             // fallback={BurgerPoster}
