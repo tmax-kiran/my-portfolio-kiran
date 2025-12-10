@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import VideoThumbnail from "./VideoThumbnail";
+import VideoThumbnail from "./VideoThumbnail.jsx";
 // Image imports
 import WishCraft from "../../assets/WishCraft.png";
 import CozyBites from "../../assets/CozyBites.png";
