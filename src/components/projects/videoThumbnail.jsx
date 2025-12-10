@@ -12,7 +12,8 @@ export default function VideoThumbnail({ src, fallback }) {
     video.onloadedmetadata = () => {
       video.currentTime = 0.5;
     };
-
+   
+    
     video.onseeked = () => {
       const canvas = document.createElement("canvas");
       canvas.width = video.videoWidth;
